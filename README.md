@@ -1,17 +1,34 @@
-# flutter_widgets_kirenkina
+# Лабораторная работа №4-5. Flutter: структура UI и компонентный подход
+### Информация об авторе
+Киренкина Вероника ИСП-241 16.11.2026
 
-A new Flutter project.
+### Что изучила
 
-## Getting Started
+1. Создание собственных виджетов-классов
+2. Научилась разбивать код на файлы
+3. Научилась передавать данные через параметры
+4. Отличия `StatelessWidget` и `StatefulWidget`
 
-This project is a starting point for a Flutter application.
+### Скриншот финального приложения
+![Скриншот финального приложения](img/step6_kirenkina.png)
 
-A few resources to get you started if this is your first Flutter project:
+### Ссылка на репозиторий
+[Ссылка на репозиторий](https://github.com/oxsjkw/Flutter_Widgets)
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+### Инструкция по запуску
+1. Клонировать репозиторий
+2. Перейти в папку проекта
+3. Выполнить `flutter pub get`
+4. Запустить командой `flutter run -d chrome`
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Ответь на вопросы:
+1. Зачем выносить виджеты в отдельные файлы? Что изменится если держать всё в
+main.dart?
+**Ответ:** Будет неудобно. С выносом виджетов в отдельные файлы код чище и читаемым, иначе будет 550 строк
+2. Что такое BuildContext? Почему метод build() принимает его как параметр?
+**Ответ:** BuildContext содержит информацию о положении виджета в дереве. build() принимает его, потому что виджет хочет знать, где он находится, чтобы хорошо нарисоваться
+3. Чем StatelessWidget отличается от StatefulWidget? Приведите пример когда
+нужен каждый из них.
+**Ответ:** У StatelessWidget не состояния, он не меняется. У StatefulWidget есть состояние, он может поменяться во время выполнения. Пример: приложение в лабе, для фона и тд нужен StatelessWidget, а для смены картинки StatefulWidget
+4. Почему Random() создаётся на уровне файла, а не внутри rollDice()?
+**Ответ:** Чтобы он не создавался заново каждый раз, это менее эффективно
